@@ -1144,25 +1144,17 @@ if prediction_mode == "Batch CSV":
                 # -----------------------------------------
 
                 st.markdown(
-                    f"""
-                    <div class="recommendation-card">
-                        <div class="recommendation-title">
-                            Campaign Recommendation
-                        </div>
-
-                        <div class="recommendation-model">
-                            Based on {selected_model_name}
-                        </div>
-
-                        <div class="recommendation-text">
-                            The selected model predicts
-                            {predicted_yes:,} out of {customers_processed:,}
-                            customers as potential term-deposit subscribers.
-                            Customers with higher predicted Yes probability
-                            can be prioritised for campaign outreach.
-                        </div>
-                    </div>
-                    """,
+                    f'<div class="recommendation-card">'
+                    f'<div class="recommendation-title">Campaign Recommendation</div>'
+                    f'<div class="recommendation-model">Based on {selected_model_name}</div>'
+                    f'<div class="recommendation-text">'
+                    f'The selected model predicts '
+                    f'{predicted_yes:,} out of {customers_processed:,} '
+                    f'customers as potential term-deposit subscribers. '
+                    f'Customers with higher predicted Yes probability '
+                    f'can be prioritised for campaign outreach.'
+                    f'</div>'
+                    f'</div>',
                     unsafe_allow_html=True
                 )
 
